@@ -1,5 +1,6 @@
 package com.example.blogssu.controller
 
+import com.example.blogssu.db.User
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RestController
@@ -8,10 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 class PostController {
 
     @PostMapping("/test/join")
-    fun join(username: String, password: String, email: String): String {
-        println(username)
-        println(password)
-        println(email)
+    fun join(user: User): String {
         return "ok"
     }
 }
