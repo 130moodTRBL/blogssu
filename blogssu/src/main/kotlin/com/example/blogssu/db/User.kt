@@ -7,6 +7,8 @@ import lombok.Getter
 import lombok.NoArgsConstructor
 import org.hibernate.annotations.CreationTimestamp
 import java.sql.Timestamp
+import java.time.LocalDate
+import java.time.LocalDateTime
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
@@ -31,6 +33,6 @@ open class User (
     @Column(name = "username")
     var username: String,
 
-    @CreationTimestamp
-    var cratedDate: Timestamp,
+    @CreationTimestamp @Column
+    var cratedDate: LocalDateTime,
         )
